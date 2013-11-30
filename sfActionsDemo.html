@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<title>sf Action Sheet Tester</title>
+
+	<link href="sfActions.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="sfActions.js"></script>
+	<link href="sfActions.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+		function initialise() {
+			console.log("Intiialised")
+		}
+		function tryAsking(){
+			sfActions.ask({
+				'headerTxt':'Sample confirm box title',
+				'mainTxt':'sample confirm box explanatory text..',
+				'useOnclicks':true,
+				'position':'top-right'
+			},[{'bText':'press me to alert',
+				'bCallback':alert,
+				'bCallBackArgs':['This is the first argument passed to the function for button 1'],
+				'bTouchedClass':'sfActbuttTouched'
+				},{
+				'bText':'Show a message in the console',
+				'bCallback':showInConsole,
+				'bCallBackArgs':['This is the first argument passed by button 2','and this si the 2nd argument passed by button 2'],
+				'bClass':'sfActbuttRed'
+				},{
+				'bText':'empty button'
+				}
+			])
+		}
+		function showInConsole(aText1, aText2) {
+			console.log(aText1);
+			console.log(aText2);
+		}
+	</script>
+
+</head>
+
+<body onload="initialise();">
+	<div>
+		In this area, presumably the application is doing something interesting.
+		</br></br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+		<div onclick="tryAsking();" style="color:blue; border:1px solid blue; text-align:center; border-radius:10px;padding:5px; margin:10px; cursor:pointer">
+				Tap here to see Action Sheet Options
+		</div>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</body>

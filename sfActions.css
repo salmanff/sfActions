@@ -1,0 +1,77 @@
+/*  
+sf Action Sheet CSS
+
+*/
+#sfActionsOuter , #sfActionsBg {
+	position: absolute;
+	top:0;
+	left:0;
+	margin: 0px;
+	width:100%;
+	height:100%;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	z-index:99;
+}
+#sfActionsInner {
+}
+.sfActbackgroundTrans {
+}
+.sfActbackgroundGrey {
+	background:rgba(0,0,0,0.8);
+	z-index:99;
+}
+.sfActinnerBox{
+	position: absolute;
+	margin:10px;
+	height:auto;
+	background-color:white;
+	padding-bottom:10px;
+	border-radius: 10px;
+	z-index:99;
+}
+.sfActHeader {
+	font-size:24px;
+	padding:10px;
+	padding-bottom:0;
+	color: black;
+	font-weight:bold;
+}
+.mainTxt {
+	padding:10px;
+	font-size:16px;
+	padding:10px;
+	padding-bottom:10px;
+	padding-top:0;
+}
+.sfActbutt, .sfActbuttTouched, .sfActbuttRed {
+	padding:10px;
+	text-align:center;
+	font-size:24px;
+	border-top: 2px solid #BCC6CC;
+}
+.sfActbutt {
+	background-color: white;
+	color: #2060ff;
+}
+.sfActbuttTouched {
+	background-color: #BCC6CC;
+	color: #2060ff;
+}
+.sfActbuttRed {
+	background-color: white;
+	color: #8C001A;
+}
+
+.sfActionsFadeInit{
+	-webkit-transition: opacity 1ms ease-in;
+	opacity:0;
+}
+.sfActionsFadein {
+	-webkit-transition: opacity 300ms ease-in;
+	opacity:1;
+/*	top:40px; */
+}
+.sfActionsFadeout {
+	-webkit-transition: opacity 300ms ease-in;
+	opacity:0;
+}
