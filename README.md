@@ -4,19 +4,19 @@ sfActions
 action sheet microlibrary
 
 An easy way to show action-sheet-like dialogie with call-forwarding which accepts arguments. For example:
-			sfActions.ask({
-				'headerTxt':'Sample confirm box title',
-				'mainTxt':'sample confirm box explanatory text..',
-				'useOnclicks':true, // you need this if you want to try it on a laptop
-				'position':'top-right'
-			},[{'bText':'press me to alert',
-				'bCallback':alert,
-				'bCallBackArgs':['This is the first argument in a list passed to the function for button 1'],
-				'bTouchedClass':'sfActbuttTouched'
-				},{
-				'bText':'cancel'
-				}
-			])
+	sfActions.ask({
+		'headerTxt':'Sample confirm box title',
+		'mainTxt':'sample confirm box explanatory text..',
+		'useOnclicks':true, // you need this if you want to try it on a laptop
+		'position':'top-right'
+	 },[{'bText':'press me to alert',
+		'bCallback':alert,
+		'bCallBackArgs':['This is the first argument in a list passed to the function for button 1'],
+		'bTouchedClass':'sfActbuttTouched'
+	 },{
+		'bText':'cancel'
+	 }
+	])
 
 
 sfActions.ask is the main method with two arguments:
